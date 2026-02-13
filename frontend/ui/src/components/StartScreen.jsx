@@ -4,7 +4,11 @@ import React from 'react';
 
 export default function StartScreen({ onSelectSingle, onSelectDual }) {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center p-4 overflow-hidden bg-[var(--bg-primary)]">
+    <div
+      className="fixed inset-0 flex flex-col items-center justify-center p-4 overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/programmer%20date.jpg')" }}
+    >
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-0"></div>
       <div className="max-w-6xl w-full flex flex-col items-center z-10">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12 animate-fade-in-down">

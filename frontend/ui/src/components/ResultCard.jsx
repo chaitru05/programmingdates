@@ -3,7 +3,7 @@ import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import { getRandomSurprise } from '../utils/generator.js';
 
-export default function ResultCard({ plan, formData, onSurprise }) {
+export default function ResultCard({ plan, formData, onSurprise, onShare }) {
   const cardRef = useRef(null);
   const partnerName = formData?.partnerName?.trim() || '';
 
@@ -13,7 +13,7 @@ export default function ResultCard({ plan, formData, onSurprise }) {
       const canvas = await html2canvas(cardRef.current, {
         scale: 2,
         useCORS: true,
-        backgroundColor: null,
+        backgroundColor: '#ffffff', // Ensure white background
         logging: false,
       });
       const imgData = canvas.toDataURL('image/png');
@@ -23,6 +23,7 @@ export default function ResultCard({ plan, formData, onSurprise }) {
       pdf.save(filename);
     } catch (err) {
       console.error('PDF download failed:', err);
+      alert('Failed to download PDF. Please try again or take a screenshot.');
     }
   };
 
@@ -178,6 +179,13 @@ export default function ResultCard({ plan, formData, onSurprise }) {
           className="px-6 py-3 rounded-2xl bg-white/40 border-2 border-rose-200 text-rose-800 font-bold hover:bg-rose-50 hover:border-rose-300 transition shadow-sm hover:shadow-md"
         >
           🎲 Add a twist
+        </button>
+        <button
+          type="button"
+          onClick={onShare}
+          className="px-6 py-3 rounded-2xl bg-white border-2 border-rose-400 text-rose-600 font-bold hover:bg-rose-50 transition shadow-sm hover:shadow-md"
+        >
+          🔗 Share Link
         </button>
         <button
           type="button"
