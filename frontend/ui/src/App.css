@@ -22,45 +22,23 @@
 
 body {
   background-color: var(--bg-primary);
+  background-image: url('/programmer date.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   font-family: var(--font-body);
   color: var(--dark-accent);
   line-height: 1.6;
 }
 
-/* ===== Navbar ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px ;
-  margin: 20px;
-
-  background: var(--primary-accent);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  border-radius: 20px;
-}
-
-.logo {
+.brand-title {
   font-family: var(--font-heading);
-  font-size: 24px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
+  font-size: 42px;
+  /* Slightly smaller than hero title (56px) */
   color: var(--dark-accent);
-  font-weight: 500;
-  transition: 0.3s ease;
+  margin-bottom: 30px;
 }
 
-.nav-links a:hover {
-  color: var(--primary-accent);
-}
 
 /* ===== Hero Section ===== */
 .hero {
@@ -75,9 +53,10 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 18px;
+  font-size: 24px;
   max-width: 600px;
   margin: 0 auto 30px auto;
+  font-weight: 500;
 }
 
 .hero-buttons {
@@ -88,19 +67,47 @@ body {
 
 /* ===== Buttons ===== */
 .btn-primary {
-  background-color: var(--primary-accent);
+  background-color: var(--dark-accent);
   color: var(--white);
-  padding: 12px 28px;
-  border-radius: 30px;
+  padding: 14px 32px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(117, 26, 23, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: var(--dark-accent);
-  transform: translateY(-3px);
+  background-color: var(--primary-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(225, 100, 104, 0.3);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* Animation Class */
+.pop-anim {
+  animation: pop 0.4s ease forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .btn-secondary {
@@ -119,60 +126,9 @@ body {
   color: var(--white);
 }
 
-/* ===== Features Section ===== */
-.features {
-  padding: 80px 8%;
-  text-align: center;
-}
 
-.section-title {
-  font-family: var(--font-heading);
-  font-size: 40px;
-  margin-bottom: 50px;
-}
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
 
-.card {
-  background: var(--white);
-  padding: 30px;
-  width: 280px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card h3 {
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.card p {
-  font-size: 14px;
-}
-
-/* ===== Footer ===== */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--white);
-  margin-top: 60px;
-  font-size: 14px;
-}
-
-.top-bar{
-  background-color: #F8D8C9;
-  height: 10px;
-}
 .app {
   position: relative;
   overflow-x: hidden;
@@ -182,11 +138,13 @@ body {
 .bg-icon {
   position: absolute;
   top: 80px;
-  right: 1200px;   /* change to left: -40px; if you want left side */
+  right: 1200px;
+  /* change to left: -40px; if you want left side */
   width: 220px;
-   /* makes it soft background */
- 
-  pointer-events: none; /* so it doesn't block clicks */
+  /* makes it soft background */
+
+  pointer-events: none;
+  /* so it doesn't block clicks */
   z-index: 0;
 }
 
