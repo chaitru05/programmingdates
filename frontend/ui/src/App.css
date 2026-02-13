@@ -1,0 +1,196 @@
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== Root Variables ===== */
+:root {
+  --bg-primary: #F8D8C9;
+  --primary-accent: #e16468;
+  --secondary-accent: #F3979C;
+  --dark-accent: #751A17;
+  --white: #ffffff;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-family: var(--font-body);
+  color: var(--dark-accent);
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px ;
+  margin: 20px;
+
+  background: var(--primary-accent);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 20px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-accent);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-accent);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  padding: 100px 8%;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  background-color: var(--primary-accent);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-accent);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--primary-accent);
+  color: var(--primary-accent);
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-accent);
+  color: var(--white);
+}
+
+/* ===== Features Section ===== */
+.features {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--white);
+  padding: 30px;
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--white);
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+.top-bar{
+  background-color: #F8D8C9;
+  height: 10px;
+}
+.app {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Decorative SVG */
+.bg-icon {
+  position: absolute;
+  top: 80px;
+  right: 1200px;   /* change to left: -40px; if you want left side */
+  width: 220px;
+   /* makes it soft background */
+ 
+  pointer-events: none; /* so it doesn't block clicks */
+  z-index: 0;
+}
+
+.bg-icon svg {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ===== Color Palette ===== */
+  --bg-primary: #F8D8C9;
+  --primary-accent: #e16468;
+  --secondary-accent: #F3979C;
+  --dark-accent: #751A17;
+  --white: #ffffff;
+
+  /* Optional neutral */
+  --bg-soft: #FFF6F2;
+
+  /* ===== Typography ===== */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* ===== Font Sizes ===== */
+  --fs-hero: 56px;
+  --fs-h1: 40px;
+  --fs-h2: 28px;
+  --fs-h3: 22px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+
+  /* ===== Font Weights ===== */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ===== Spacing ===== */
+  --section-padding: 80px;
+  --card-radius: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--dark-accent);
+}
